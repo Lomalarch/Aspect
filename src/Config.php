@@ -113,13 +113,6 @@ class Config
 
                 if (!empty($css)) {
                     App::blog()->settings()->themes->put(App::blog()->settings()->system->theme . '_styles', str_replace('&gt;', '>', htmlspecialchars($css, ENT_NOQUOTES)));
-                    // App::blog()->settings->aspect->put(
-                    //     'styles',
-                    //     str_replace('&gt;', '>', htmlspecialchars($css, ENT_NOQUOTES)),
-                    //     'string',
-                    //     $default_settings['styles']['title'],
-                    //     true
-                    // );
                 } else {
                     App::blog()->settings()->themes->drop(App::blog()->settings()->system->theme . '_styles');
                 }
@@ -159,8 +152,6 @@ class Config
         if (!self::status()) {
             return;
         }
-
-        $footer_credits = App::backend()->aspect_user['footer_credits'];
 
         // Page content
         echo (new Set())
@@ -218,7 +209,7 @@ class Config
                     ->items([
                         (new Para('footer_credits-input'))
                             ->items([
-                                (new Checkbox('footer_credits', App::backend()->aspect_user['footer_credits'] != 0))
+                                (new Checkbox('footer_credits', (App::backend()->aspect_user['footer_credits'] != 0 || App::backend()->aspect_user['footer_credits'] === null)))
                             ->label((new Label(__('Display a mention to Dotclear and the theme'), Label::IL_FT)))
                             ]),
                         (new Text('p', __('Allows you to advertise Dotclear and this theme.')))
