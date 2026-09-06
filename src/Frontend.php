@@ -86,7 +86,7 @@ class Frontend
     {
         $toto = App::blog()->settings()->themes->get(App::blog()->settings()->system->theme . '_footer_credits');
         if (App::blog()->settings()->themes->get(App::blog()->settings()->system->theme . '_footer_credits') != 0) {
-            echo '<div class="footer-div" id="copyright"><em>', App::blog()->name, '</em> ', __('is powered by <a href="https://dotclear.org/" target="_blank">Dotclear</a> and <a href="https://dotclear.org/theme/list" target="_blank">Aspect</a>'), ' Et coucou !!!!</div>';
+            echo '<div class="footer-div" id="copyright"><em>', App::blog()->name, '</em> ', __('is powered by <a href="https://dotclear.org/" target="_blank">Dotclear</a> and <a href="https://codeberg.org/Lomalarch/Aspect" target="_blank">Aspect</a>'), ' Et coucou !!!!</div>';
         }
     }
 
