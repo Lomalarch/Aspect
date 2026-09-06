@@ -1,0 +1,22 @@
+<article id="{{tpl:lang page}}-{{tpl:EntryID}}" class="page {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full" lang="{{tpl:EntryLang}}" itemscope itemtype="http://schema.org/WebPage">
+    <header>
+        <h1 class="post-title" itemprop="headline">{{tpl:EntryTitle}}</h1>
+    </header>
+
+    <div class="post-content" itemprop="mainContentOfPage">
+        {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+
+        {{tpl:EntryContent}}
+
+        {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+    </div>
+
+    <footer class="post-footer">
+        {{tpl:include src="_attachments.html"}}
+
+        <div id="print-post-link">
+            {{tpl:lang This page is available at:}}<br>{{tpl:EntryURL}}
+        </div>
+    </footer>
+</article>
+{{tpl:include src="_comments.html"}}

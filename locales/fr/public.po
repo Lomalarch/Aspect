@@ -1,0 +1,312 @@
+#__layout.html
+
+msgid "page"
+msgstr "page"
+
+msgid "Archives"
+msgstr "Archives"
+
+msgid "Previous entries"
+msgstr "Entrées précédentes"
+
+msgid "Next entries"
+msgstr "Entrées suivantes"
+
+msgid "Posts feed"
+msgstr "Fil des billets"
+
+#_attachments.html
+
+msgid "attachments"
+msgstr "annexes"
+
+msgid "Attachments"
+msgstr "Annexes"
+
+#_comments.html
+
+msgid "comments"
+msgstr "commentaires"
+
+msgid "comment"
+msgstr "commentaire"
+
+msgid "Trackback:"
+msgstr "Rétrolien&nbsp;:"
+
+msgid "Source:"
+msgstr "Source&nbsp;:"
+
+msgid "The"
+msgstr "Le"
+
+msgid "at"
+msgstr "à"
+
+msgid "preview"
+msgstr "previsualisation"
+
+msgid "Your comment has been published."
+msgstr "Votre commentaire a été publié."
+
+msgid "Your comment has been sent. It will be verified before publication."
+msgstr "Votre commentaire a bien été envoyé. Il sera vérifié avant publication."
+
+msgid "Preview before sending"
+msgstr "Prévisualisation avant envoi"
+
+msgid "Your comment will look like this:"
+msgstr "Votre commentaire s’affichera comme suit&nbsp;:"
+
+msgid "Publish the comment"
+msgstr "Publier le commentaire"
+
+msgid "Add a comment"
+msgstr "Ajouter un commentaire"
+
+msgid "Name or pseudo"
+msgstr "Nom ou pseudonyme"
+
+msgid "E-mail"
+msgstr "Adresse électronique"
+
+msgid "Website (optional)"
+msgstr "Site Internet (facultatif)"
+
+msgid "Your comment"
+msgstr "Votre commentaire"
+
+msgid "Preview before sending"
+msgstr "Prévisualiser avant envoi"
+
+msgid "Send"
+msgstr "Envoyer"
+
+msgid "Comments feed"
+msgstr "Fil des commentaires"
+
+msgid "Trackback URL:"
+msgstr "Adresse de rétrolien&nbsp;:"
+
+#_entry-excerpt.html
+
+msgid "post"
+msgstr "billet"
+
+msgid "Published on"
+msgstr "Publié le"
+
+msgid "in"
+msgstr "dans"
+
+#_entry-full.html
+
+msgid "By"
+msgstr "Par"
+
+msgid "on"
+msgstr "le"
+
+msgid "Sorted in"
+msgstr "Classé dans"
+
+msgid "Tags:"
+msgstr "Mots-clés&nbsp;:"
+
+msgid "This post is available at:"
+msgstr "Ce billet est accessible à l’adresse suivante&nbsp;:"
+
+#_entry-page.php
+
+msgid "page"
+msgstr "page"
+
+msgid "This page is available at:"
+msgstr "Cete page est accessible à l’adresse suivante&nbsp;:"
+
+#_footer.html
+
+msgid "is powered by <a href="https://dotclear.org/" target="_blank">Dotclear</a> and <a href="http://themes.dotaddict.org/galerie-dc2/details/aspect" target="_blank">Aspect</a>"
+msgstr "est propulsé par <a href="https://fr.dotclear.org/" target="_blank">Dotclear</a> et <a href="http://themes.dotaddict.org/galerie-dc2/details/aspect" target="_blank">Aspect</a>"
+
+msgid "Remember me"
+msgstr "Se souvenir de moi"
+
+#_pagination.html
+
+msgid "of"
+msgstr "sur"
+
+msgid "previous page"
+msgstr "page précédente"
+
+msgid "next page"
+msgstr "page suivante"
+
+#404.html
+
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+msgid "There is nothing to display on this page."
+msgstr "Il n’y a rien à afficher sur cette page."
+
+msgid "There is nothing to display."
+msgstr "Il n’y a rien à afficher."
+
+#archive_month.html
+
+msgid "Archives sorted by month"
+msgstr "Archives classées par mois"
+
+msgid "Archives of"
+msgstr "Archives de"
+
+#archive_month.html
+
+msgid "By date"
+msgstr "Par date"
+
+msgid "From"
+msgstr "Du"
+
+msgid "to"
+msgstr "au"
+
+msgid "By category"
+msgstr "Par catégorie"
+
+msgid "By tag"
+msgstr "Par mot-clé"
+
+msgid "Pages"
+msgstr "Pages"
+
+#category.html
+
+msgid "Posts feed for this category"
+msgstr "Fil des billets classés dans cette catégorie"
+
+msgid "Comments feed for this category"
+msgstr "Fil des commentaires publiés dans cette catégorie"
+
+#page.html
+
+msgid "Comments feed for this page"
+msgstr "Fil des commentaires publiés sur cette page"
+
+#post.html
+
+msgid "Comments feed for this post"
+msgstr "Fil des commentaires publiés sur ce billet"
+
+#search.html
+
+msgid "Search results for &quot;"
+msgstr "Résultats de la recherche «&nbsp;"
+
+msgid "&quot;"
+msgstr "&nbsp;»"
+
+msgid "Search of &quot;"
+msgstr "Recherche de «&nbsp;"
+
+msgid "Your search returned <strong>one</strong> result."
+msgstr "Votre recherche a généré <strong>un</strong> résultat."
+
+msgid "Your search returned <strong>%2$s</strong> results."
+msgstr "Votre recherche a généré <strong>%2$s</strong> résultats."
+
+msgid "No results."
+msgstr "Aucun résultat."
+
+msgid "Posts for which the tag &quot;"
+msgstr "Billets pour lesquels le mot-clé «&nbsp;"
+
+msgid "&quot; is assigned"
+msgstr "&nbsp;» est attribué"
+
+msgid "Post feed for this tag"
+msgstr "Flux du mot-clé"
+
+msgid "Comments feed for this tag"
+msgstr "Flux des commentaires du mot-clé"
+
+msgid "Tags"
+msgstr "Mots-clés"
+
+msgid "Password needed"
+msgstr "Mot de passe nécessaire"
+
+msgid "You must give a password to access this area."
+msgstr "Vous devez indiquer un mot de passe pour accéder à cette partie."
+
+msgid "Password:"
+msgstr "Mot de passe&nbsp;:"
+
+msgid "Submit"
+msgstr "Valider"
+
+msgid "Submit"
+msgstr "Valider"
+
+#_config.php
+msgid "Default: checked."
+msgstr "Par défaut : coché."
+
+msgid "Default: unchecked."
+msgstr "Par défaut : décoché."
+
+msgid "Header Settings"
+msgstr "Paramètres de l’en-tête"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Logo URL"
+msgstr "Adresse du logo"
+
+msgid "Dual pixel density logo URL"
+msgstr "Adresse du logo à double densité de pixels"
+
+msgid "To ensure proper display on dual pixel density displays (Retina), please provide an image that is twice the size of the standard image."
+msgstr "Pour garantir un bon affichage sur les écrans à densité de pixels double (Retina), veuillez fournir une image dont la taille est deux fois supérieure à l’image précédente."
+
+msgid "Content Settings"
+msgstr "Paramètres du contenu"
+
+msgid "Style of post content"
+msgstr "Style du contenu des billets"
+
+msgid "Standard (default)"
+msgstr "Standard (par défaut)"
+
+msgid "Roman"
+msgstr "Roman"
+
+msgid "Appearance of titles"
+msgstr "Apparence des titres"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Small caps (default)"
+msgstr "Petites majuscules (par défaut)"
+
+msgid "Footer Settings"
+msgstr "Paramètres du pied de page"
+
+msgid "Display a mention to Dotclear and the theme"
+msgstr "Afficher une mention à Dotclear et au thème"
+
+msgid "Allows you to advertise Dotclear and this theme."
+msgstr "Permet de faire de la publicité pour Dotclear et ce thème."
+
+msgid "Reset all settings"
+msgstr "Réinitialiser tous les paramètres"
+
+msgid "The theme configuration has been updated."
+msgstr "La configuration du thème a été mise à jour."
+
+msgid "The theme configuration has been reset."
+msgstr "La configuration du thème a été réinitialisée."

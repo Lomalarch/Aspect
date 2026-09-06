@@ -1,0 +1,49 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+    <title>{{tpl:CategoryTitle encode_html="1"}} &lsaquo; {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
+
+<tpl:Block name="head-description">
+    <meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:CategoryDescription encode_html="1" remove_html="1"}}">
+</tpl:Block>
+
+<tpl:Block name="head-link-loop">
+    <tpl:Entries no_content="1">
+        <tpl:EntriesHeader>
+            <tpl:Pagination>
+                <tpl:PaginationIf end="0">
+                    <link rel="prev" title="{{tpl:lang Previous entries}}" href="{{tpl:PaginationURL offset="1"}}">
+                </tpl:PaginationIf>
+
+                <tpl:PaginationIf start="0">
+                    <link rel="next" title="{{tpl:lang Next entries}}" href="{{tpl:PaginationURL offset="-1"}}">
+                </tpl:PaginationIf>
+            </tpl:Pagination>
+        </tpl:EntriesHeader>
+
+        <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}">
+    </tpl:Entries>
+</tpl:Block>
+
+<tpl:Block name="head-link-feeds">
+    <link rel="alternate" type="application/atom+xml" title="{{tpl:lang Posts feed for this category}}" href="{{tpl:CategoryFeedURL type="atom"}}">
+    <link rel="alternate" type="application/atom+xml" title="{{tpl:lang Comments feed for this category}}" href="{{tpl:CategoryFeedURL type="atom"}}/comments">
+</tpl:Block>
+
+<tpl:Block name="head-link-various"></tpl:Block>
+
+<tpl:Block name="main-content">
+    <div id="content-info">
+        <h1 class="content-title">{{tpl:CategoryTitle}}</h1>
+
+        {{tpl:CategoryDescription}}
+    </div>
+    <tpl:Entries>
+        {{tpl:include src="_entry-excerpt.html"}}
+
+        <tpl:EntriesFooter>
+            {{tpl:include src="_pagination.html"}}
+        </tpl:EntriesFooter>
+    </tpl:Entries>
+</tpl:Block>

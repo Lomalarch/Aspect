@@ -1,0 +1,27 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+    <title>{{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> – {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+</tpl:Block>
+
+<tpl:Block name="head-description">
+    <meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription}}<tpl:PaginationIf start="0">  - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>">
+</tpl:Block>
+
+<tpl:Block name="head-link-loop">
+    <link rel="canonical" href="{{tpl:BlogURL}}">
+</tpl:Block>
+
+<tpl:Block name="site-logo">
+  {{tpl:aspectLogo}}
+</tpl:Block>
+
+<tpl:Block name="page-header">
+    <h1 id="site-title" itemprop="name"><a href="{{tpl:BlogURL}}" itemprop="url">{{tpl:BlogName}}</a></h1>
+
+    <h2 id="site-description" itemprop="description">{{tpl:BlogDescription}}</h2>
+
+    {{tpl:SimpleMenu id="main-menu"}}
+
+    {{tpl:SysBehavior behavior="publicTopAfterContent"}}
+</tpl:Block>

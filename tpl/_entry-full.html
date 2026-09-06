@@ -1,0 +1,47 @@
+<tpl:Block name="entry-full-article">
+    <article id="{{tpl:lang post}}-{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}" lang="{{tpl:EntryLang}}" itemscope itemtype="http://schema.org/Article" >
+</tpl:Block>
+
+<tpl:Block name="entry-full-header">
+    <header>
+        <h1 class="post-title{{tpl:EntryIfSelected return=" post-title-selected"}}" itemprop="headline">{{tpl:EntryTitle}}</h1>
+
+        <div class="post-meta">
+            {{tpl:lang By}} <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="post-author" itemprop="name">{{tpl:EntryAuthorLink}}</span></span>, {{tpl:lang on}} <time datetime="{{tpl:EntryDate format="%Y-%m-%dT%H:%m"}}" itemprop="datePublished">{{tpl:EntryDate}} {{tpl:lang at}} {{tpl:EntryTime}}</time>
+        </div>
+    </header>
+</tpl:Block>
+
+<tpl:Block name="entry-full-content">
+    <div class="post-content" itemprop="articleBody">
+        {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+
+        {{tpl:EntryContent}}
+
+        {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+    </div>
+</tpl:Block>
+
+<tpl:Block name="entry-full-footer">
+    <footer class="post-footer">
+        <tpl:EntryIf has_category="1">
+            <div class="post-meta">
+                {{tpl:lang Sorted in}} <a href="{{tpl:EntryCategoryURL}}" itemprop="articleSection">{{tpl:EntryCategory}}</a>
+            </div>
+        </tpl:EntryIf>
+
+        <tpl:EntryTags>
+            <tpl:TagsHeader><div class="post-meta post-tags">{{tpl:lang Tags:}}<span></tpl:TagsHeader>
+                <a href="{{tpl:TagURL}}">{{tpl:TagID}}</a><tpl:LoopPosition start="1" length="-1">, </tpl:LoopPosition>
+            <tpl:TagsFooter></span></div></tpl:TagsFooter>
+        </tpl:EntryTags>
+
+        {{tpl:include src="_attachments.html"}}
+
+        <div id="print-post-link">
+            {{tpl:lang This post is available at:}}<br>{{tpl:EntryURL}}
+        </div>
+    </footer>
+</tpl:Block>
+</article>
+{{tpl:include src="_comments.html"}}

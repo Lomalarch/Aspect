@@ -1,0 +1,25 @@
+Nom du thème : Aspect
+Description : Un thème spécialement conçu pour les blogueurs, écrivains et journalistes qui veulent prendre soin de leurs lecteurs.
+Auteur : Théodore
+Licence : GNU GENERAL PUBLIC LICENSE version 2.0
+Adresse de la licence : https://www.gnu.org/licenses/old-licenses/gpl-2.0.fr.html
+
+Note :
+Ce thème n’aurait pu avoir vu le jour sans les ressources mises à disposition librement par la communauté Dotclear.
+Son auteur s’est particulièrement inspiré des travaux réalisés sur le thème Ductile créé par l’association Dotclear.
+
+Ressources :
+- Police d’écriture EB Garamond
+Copyright (c) Georg Duffner (http://www.georgduffner.at)
+Licence : SIL Open Font License
+Source : https://github.com/georgd/EB-Garamond
+
+- Police d’écriture PT Sans
+Copyright (c) 2010, ParaType Ltd. (http://www.paratype.com/public), with Reserved Font Names "PT Sans" and "ParaType"
+Licence : SIL Open Font License Version 1.1
+Source : https://github.com/google/fonts/tree/master/ofl/ptsans
+
+- Icônes 
+Copyright (c) 2013-2017 Cole Bemis
+Licence : MIT
+Source : https://feathericons.com/

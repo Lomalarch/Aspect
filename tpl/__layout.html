@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="{{tpl:BlogLanguage}}" prefix="og: http://ogp.me/ns#">
+  <head>
+    <tpl:Block name="html-head">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <tpl:Block name="head-title">
+        <title>{{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> – {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+      </tpl:Block>
+
+      <tpl:Block name="head-description">
+        <meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription remove_html="1" encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>">
+      </tpl:Block>
+
+      <tpl:Block name="head-meta">
+        <meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}">
+        <meta name="author" content="{{tpl:BlogEditor encode_html="1"}}">
+        <meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}">
+        <meta name="generator" content="Dotclear">
+      </tpl:Block>
+            
+      <tpl:Block name="meta-robots">
+        <meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}">
+      </tpl:Block>
+
+      <tpl:Block name="head-link">
+        <link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}">
+
+        <tpl:Block name="head-link-loop">
+          <tpl:Categories>
+            <link rel="section" href="{{tpl:CategoryURL}}" title="{{tpl:CategoryTitle encode_html="1"}}">
+          </tpl:Categories>
+
+          <tpl:Entries no_content="1">
+            <tpl:EntriesHeader>
+              <tpl:Pagination>
+                <tpl:PaginationIf end="0">
+                  <link rel="prev" title="{{tpl:lang Previous entries}}" href="{{tpl:PaginationURL offset="1"}}">
+                </tpl:PaginationIf>
+
+                <tpl:PaginationIf start="0">
+                  <link rel="next" title="{{tpl:lang Next entries}}" href="{{tpl:PaginationURL offset="-1"}}">
+                </tpl:PaginationIf>
+              </tpl:Pagination>
+            </tpl:EntriesHeader>
+
+            <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}">
+          </tpl:Entries>
+        </tpl:Block>
+
+        <tpl:Block name="head-link-feeds">
+          <link rel="alternate" type="application/atom+xml" title="{{tpl:lang Posts feed}}" href="{{tpl:BlogFeedURL type="atom"}}">
+        </tpl:Block>
+      </tpl:Block>
+
+      {{tpl:include src="_head.html"}}
+    </tpl:Block>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/Blog">
+    <tpl:Block name="html-body">
+      <div id="page">
+        <tpl:Block name="body-page">
+          <header id="site-header" itemscope itemtype="http://schema.org/WPHeader">
+            <tpl:Block name="site-header">
+              <tpl:Block name="site-logo">
+                {{tpl:aspectLogo}}
+              </tpl:Block>
+
+              <tpl:Block name="page-header">
+                  <h4 id="site-title" itemprop="name"><a href="{{tpl:BlogURL}}" itemprop="url">{{tpl:BlogName}}</a></h4>
+
+                  <h5 id="site-description" itemprop="description">{{tpl:BlogDescription}}</h5>
+
+                  {{tpl:SimpleMenu id="main-menu"}}
+
+                  {{tpl:SysBehavior behavior="publicTopAfterContent"}}
+              </tpl:Block>
+            </tpl:Block>
+          </header>
+
+          <main id="content">
+            <tpl:Block name="main-content">
+              <tpl:Entries>
+                {{tpl:include src="_entry-excerpt.html"}}
+
+                <tpl:EntriesFooter>
+                  {{tpl:include src="_pagination.html"}}
+                </tpl:EntriesFooter>
+              </tpl:Entries>
+            </tpl:Block>
+          </main>
+
+          <tpl:Block name="page-sidebar">
+            {{tpl:include src="_sidebar.html"}}
+          </tpl:Block>
+
+          <tpl:Block name="page-footer">
+            {{tpl:include src="_footer.html"}}
+          </tpl:Block>
+        </tpl:Block>
+      </div>
+    </tpl:Block>
+  </body>
+</html>

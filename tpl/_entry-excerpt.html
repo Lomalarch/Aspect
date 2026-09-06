@@ -1,0 +1,40 @@
+<tpl:Block name="entry-excerpt-article">
+    <article id="{{tpl:lang post}}-{{tpl:EntryID}}" class="post-list {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}" lang="{{tpl:EntryLang}}" itemscope itemtype="http://schema.org/Article">
+</tpl:Block>
+    <tpl:Block name="entry-excerpt-header">
+        <header>
+            <h3 class="post-title post-list-title{{tpl:EntryIfSelected return=" post-title-selected"}}" itemprop="name"><a href="{{tpl:EntryURL}}" itemprop="url">{{tpl:EntryTitle}}</a></h3>
+        </header>
+    </tpl:Block>
+
+    <tpl:Block name="entry-excerpt-content">
+        <div class="post-content excerpt-link">
+            <a href="{{tpl:EntryURL}}" itemprop="url">
+                <tpl:EntryIf extended="1">
+                    <p>{{tpl:EntryExcerpt remove_html="1"}}</p>
+                </tpl:EntryIf>
+
+                <tpl:EntryIf extended="0">
+                    {{tpl:EntryContent encode_html="1" remove_html="1" cut_string="220"}}
+                    <tpl:EntryIfContentIsCut encode_html="1" remove_html="1" cut_string="220">
+                        <span class="excerpt-more">[&hellip;]</span>
+                    </tpl:EntryIfContentIsCut>
+                </tpl:EntryIf>
+            </a>
+        </div>
+    </tpl:Block>
+
+    <tpl:Block name="entry-excerpt-footer">
+        <footer class="post-list-footer">
+            <div class="post-meta">
+                {{tpl:lang Published on}} <a href="{{tpl:EntryURL}}" itemprop="url"><time datetime="{{tpl:EntryDate format="%Y-%m-%dT%H:%m"}}" itemprop="datePublished">{{tpl:EntryDate}} {{tpl:lang at}} {{tpl:EntryTime}}</time></a><tpl:EntryIf has_category="1"> {{tpl:lang in}} <a href="{{tpl:EntryCategoryURL}}" itemprop="articleSection">{{tpl:EntryCategory}}</a></tpl:EntryIf>
+            </div>
+
+            <tpl:EntryIf show_comments="1">
+                <div class="post-meta post-comments">
+                    <a href="{{tpl:EntryURL}}#{{tpl:lang comments}}" itemprop="discussionUrl">{{tpl:EntryCommentCount}}</a>
+                </div>
+            </tpl:EntryIf>
+        </footer>
+    </tpl:Block>
+</article>

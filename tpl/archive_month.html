@@ -1,0 +1,60 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+    <title>{{tpl:lang Archives}} - {{tpl:ArchiveDate}} &lsaquo; {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
+
+<tpl:Block name="head-description">
+    <meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:lang Archives sorted by month}}">
+</tpl:Block>
+
+<tpl:Block name="meta-robots">
+    <meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}">
+</tpl:Block>
+
+<tpl:Block name="head-link-loop">
+    <tpl:Archives>
+        <link rel="chapter" href="{{tpl:ArchiveURL}}" title="{{tpl:ArchiveDate encode_html="1"}}" />
+    </tpl:Archives>
+
+    <tpl:ArchiveNext>
+        <link rel="next" href="{{tpl:ArchiveURL}}" title="{{tpl:ArchiveDate encode_html="1"}}">
+    </tpl:ArchiveNext>
+
+    <tpl:ArchivePrevious>
+        <link rel="prev" href="{{tpl:ArchiveURL}}" title="{{tpl:ArchiveDate encode_html="1"}}">
+    </tpl:ArchivePrevious>
+
+    <tpl:Entries no_content="1">
+        <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}">
+    </tpl:Entries>
+</tpl:Block>
+
+<tpl:Block name="head-link-feeds"></tpl:Block>
+<tpl:Block name="head-link-various"></tpl:Block>
+
+<tpl:Block name="main-content">
+    <div id="content-info">
+        <h1 class="content-title">{{tpl:lang Archives of}} {{tpl:ArchiveDate}} ({{tpl:ArchiveEntriesCount}})</h1>
+
+        <p>
+            <tpl:ArchivePrevious>
+                <a href="{{tpl:ArchiveURL}}" class="prev">&#171; {{tpl:ArchiveDate encode_html="1"}}</a> - 
+            </tpl:ArchivePrevious>
+
+            {{tpl:ArchiveDate}}
+
+            <tpl:ArchiveNext>
+                - <a href="{{tpl:ArchiveURL}}" class="next">{{tpl:ArchiveDate encode_html="1"}} &#187;</a>
+            </tpl:ArchiveNext>
+        </p>
+    </div>
+
+    <tpl:Entries>
+        {{tpl:include src="_entry-excerpt.html"}}
+
+        <tpl:EntriesFooter>
+            {{tpl:include src="_pagination.html"}}
+        </tpl:EntriesFooter>
+    </tpl:Entries>
+</tpl:Block>

@@ -1,0 +1,14 @@
+<div id="site-footer">
+    <tpl:SysIf jquery_needed="1">
+        <tpl:Block name="footer-script">
+            <script type="text/javascript" src="{{tpl:BlogQmarkURL}}pf={{tpl:BlogJsJQuery}}/jquery.js"></script>
+            <script type="text/javascript" src="{{tpl:BlogQmarkURL}}pf={{tpl:BlogJsJQuery}}/jquery.cookie.js"></script>
+            <script type="text/javascript" src="{{tpl:BlogParentThemeURL}}/js/aspect.js"></script>
+            {{tpl:AspectPostScripts}}
+        </tpl:Block>
+    </tpl:SysIf>
+
+    <div class="footer-div">{{tpl:Widgets type="custom"}}</div>
+
+    {{tpl:SysBehavior behavior="publicFooterContent"}}
+</div>

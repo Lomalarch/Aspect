@@ -1,0 +1,318 @@
+#__layout.html
+
+msgid "page"
+msgstr ""
+
+msgid "Archives"
+msgstr ""
+
+msgid "Previous entries"
+msgstr ""
+
+msgid "Next entries"
+msgstr ""
+
+msgid "Posts feed"
+msgstr ""
+
+#_attachments.html
+
+msgid "attachments"
+msgstr ""
+
+msgid "Attachments"
+msgstr ""
+
+#_comments.html
+
+msgid "comments"
+msgstr ""
+
+msgid "comment"
+msgstr ""
+
+msgid "Trackback:"
+msgstr ""
+
+msgid "Source:"
+msgstr ""
+
+msgid "The"
+msgstr ""
+
+msgid "at"
+msgstr ""
+
+msgid "preview"
+msgstr ""
+
+msgid "Your comment has been published."
+msgstr ""
+
+msgid "Your comment has been sent. It will be verified before publication."
+msgstr ""
+
+msgid "Preview before sending"
+msgstr ""
+
+msgid "Your comment will look like this:"
+msgstr ""
+
+msgid "Publish the comment"
+msgstr ""
+
+msgid "Add a comment"
+msgstr ""
+
+msgid "Name or pseudo"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Website (optional)"
+msgstr ""
+
+msgid "Your comment"
+msgstr ""
+
+msgid "Preview before sending"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Comments feed"
+msgstr ""
+
+msgid "Trackback URL:"
+msgstr ""
+
+#_entry-excerpt.html
+
+msgid "post"
+msgstr ""
+
+msgid "Published on"
+msgstr ""
+
+msgid "in"
+msgstr ""
+
+#_entry-full.html
+
+msgid "By"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
+msgid "Sorted in"
+msgstr ""
+
+msgid "Tags:"
+msgstr ""
+
+msgid "This post is available at:"
+msgstr ""
+
+#_entry-page.php
+
+msgid "page"
+msgstr ""
+
+msgid "This page is available at:"
+msgstr ""
+
+#_footer.html
+
+msgid "is powered by <a href="https://dotclear.org/" target="_blank">Dotclear</a> and <a href="http://themes.dotaddict.org/galerie-dc2/details/aspect" target="_blank">Aspect</a>"
+msgstr ""
+
+msgid "Remember me"
+msgstr ""
+
+#_pagination.html
+
+msgid "of"
+msgstr ""
+
+msgid "previous page"
+msgstr ""
+
+msgid "next page"
+msgstr ""
+
+#404.html
+
+msgid "Page not found"
+msgstr ""
+
+msgid "There is nothing to display on this page."
+msgstr ""
+
+msgid "There is nothing to display."
+msgstr ""
+
+#archive_month.html
+
+msgid "Archives sorted by month"
+msgstr ""
+
+msgid "Archives of"
+msgstr ""
+
+#archive_month.html
+
+msgid "By date"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "By category"
+msgstr ""
+
+msgid "By tag"
+msgstr ""
+
+msgid "Pages"
+msgstr ""
+
+#category.html
+
+msgid "Posts feed for this category"
+msgstr ""
+
+msgid "Comments feed for this category"
+msgstr ""
+
+#page.html
+
+msgid "Comments feed for this page"
+msgstr ""
+
+#post.html
+
+msgid "Comments feed for this post"
+msgstr ""
+
+#search.html
+
+msgid "Search results for &quot;"
+msgstr ""
+
+msgid "&quot;"
+msgstr ""
+
+msgid "Search of &quot;"
+msgstr ""
+
+msgid "Your search returned <strong>one</strong> result."
+msgstr ""
+
+msgid "Your search returned <strong>%2$s</strong> results."
+msgstr ""
+
+msgid "No results."
+msgstr ""
+
+#tag.html
+
+msgid "Posts for which the tag &quot;"
+msgstr ""
+
+msgid "&quot; is assigned"
+msgstr ""
+
+msgid "Posts feed for this tag"
+msgstr ""
+
+msgid "Comments feed for this tag"
+msgstr ""
+
+#tags.html
+
+msgid "Tags"
+msgstr ""
+
+#password-form.html
+
+msgid "Password needed"
+msgstr ""
+
+msgid "You must give a password to access this area."
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "Submit"
+msgstr ""
+
+#_config.php
+msgid "Default: checked."
+msgstr ""
+
+msgid "Default: unchecked."
+msgstr ""
+
+msgid "Header Settings"
+msgstr ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "Logo URL"
+msgstr ""
+
+msgid "Dual pixel density logo URL"
+msgstr ""
+
+msgid "To ensure proper display on dual pixel density displays (Retina), please provide an image that is twice the size of the standard image."
+msgstr ""
+
+msgid "Content Settings"
+msgstr ""
+
+msgid "Style of post content"
+msgstr ""
+
+msgid "Standard (default)"
+msgstr ""
+
+msgid "Roman"
+msgstr ""
+
+msgid "Appearance of titles"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Small caps (default)"
+msgstr ""
+
+msgid "Footer Settings"
+msgstr ""
+
+msgid "Credits"
+msgstr ""
+
+msgid "Display a mention to Dotclear and the theme"
+msgstr ""
+
+msgid "Allows you to advertise Dotclear and this theme."
+msgstr ""
+
+msgid "Reset all settings"
+msgstr ""
+
+msgid "The theme configuration has been updated."
+msgstr ""
+
+msgid "The theme configuration has been reset."
+msgstr ""

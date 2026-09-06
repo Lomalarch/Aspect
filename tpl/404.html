@@ -1,0 +1,20 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+    <title>{{tpl:lang Page not found}} - {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
+
+<tpl:Block name="head-description">
+    <meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:lang There is nothing to display on this page.}}">
+</tpl:Block>
+
+<tpl:Block name="head-link-loop"></tpl:Block>
+
+<tpl:Block name="main-content">
+    <div id="content-info">
+        <h1 class="content-title">
+            {{tpl:lang Page not found}}
+        </h1>
+    </div>
+    <p>{{tpl:lang There is nothing to display.}}</p>
+</tpl:Block>

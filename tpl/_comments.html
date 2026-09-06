@@ -1,0 +1,146 @@
+<tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+    <div id="{{tpl:lang comments}}" class="comment-block">
+</tpl:EntryIf>
+<tpl:EntryIf show_comments="1">
+    <tpl:Comments with_pings="1">
+        <tpl:CommentsHeader>
+            <h3 id="comments-count">{{tpl:EntryCommentCount count_all="1" none=""}}</h3>
+            <ul id="comments-list">
+        </tpl:CommentsHeader>
+            <tpl:CommentIf is_ping="0">
+                <li id="{{tpl:lang comment}}-{{tpl:CommentID}}" class="comment {{tpl:CommentIfMe}} {{tpl:CommentIfOdd}} {{tpl:CommentIfFirst}}">
+            </tpl:CommentIf>
+
+            <tpl:CommentIf is_ping="1">
+                <li id="{{tpl:lang comment}}-{{tpl:PingID}}" class="ping {{tpl:PingIfOdd}} {{tpl:PingIfFirst}}">
+            </tpl:CommentIf>
+                    <div class="comment-header">
+                        <a href="#{{tpl:lang comment}}-{{tpl:CommentID}}" class="comment-number">{{tpl:CommentOrderNumber}}</a>
+                    </div>
+
+                    <div class="comment-content<tpl:CommentIf is_ping="1"> ping-content</tpl:CommentIf>">
+                        {{tpl:SysBehavior behavior="publicCommentBeforeContent"}}
+
+                        <tpl:CommentIf is_ping="1">
+                            <div class="ping-elsewhere">{{tpl:lang Trackback:}}</div>
+                        </tpl:CommentIf>
+
+                        {{tpl:CommentContent}}
+
+                        {{tpl:SysBehavior behavior="publicCommentAfterContent"}}
+                    </div>
+
+                    <tpl:Block name="comment-info">
+                        <div class="comment-info">
+                            <div class="comment-info-name">
+                                <tpl:CommentIf is_ping="0">
+                                    &mdash; <span class="comment-author">{{tpl:CommentAuthorLink}}</span><br>
+                                </tpl:CommentIf>
+                                <tpl:CommentIf is_ping="1">
+                                    {{tpl:lang Source:}} <span class="comment-author">{{tpl:CommentAuthorLink}}</span><br>
+                                </tpl:CommentIf>
+                            </div>
+                            <div class="comment-info-date">
+                                {{tpl:lang On}} {{tpl:CommentDate}} {{tpl:lang at}} {{tpl:CommentTime}}
+                            </div>
+                        </div>
+                    </tpl:Block>
+                </li>
+        <tpl:CommentsFooter>
+            </ul>
+        </tpl:CommentsFooter>
+    </tpl:Comments>
+</tpl:EntryIf>
+
+<tpl:EntryIf comments_active="1">
+    <tpl:Block name="comment-alerts">
+        <tpl:SysIfFormError>
+            <div class="comment-message" id="{{tpl:lang preview}}">{{tpl:SysFormError}}</div>
+        </tpl:SysIfFormError>
+
+        <tpl:SysIfCommentPublished>
+            <div class="comment-message" id="{{tpl:lang preview}}">{{tpl:lang Your comment has been published.}}</div>
+        </tpl:SysIfCommentPublished>
+
+        <tpl:SysIfCommentPending>
+            <div class="comment-message" id="{{tpl:lang previsualisation}}">{{tpl:lang Your comment has been sent. It will be verified before publication.}}</div>
+        </tpl:SysIfCommentPending>
+    </tpl:Block>
+
+    <tpl:Block name="comment-form">
+        <form action="{{tpl:EntryURL}}#{{tpl:lang previsualisation}}" method="post" id="comment-form">
+            <tpl:Block name="comment-form-preview">
+                <tpl:IfCommentPreview>
+                    <div id="{{tpl:lang previsualisation}}" class="comment-preview">
+                        <div class="comment-preview-info">
+                            <h3>{{tpl:lang Preview before sending}}</h3>
+                            <p>{{tpl:lang Your comment will look like this:}}</p>
+                        </div>
+
+                        <div class="comment-content">
+                            {{tpl:CommentPreviewContent}}
+                        </div>
+
+                        <div class="comment-info" id="comment-name-preview">
+                            &mdash; <span class="comment-author">{{tpl:CommentPreviewName}}</span>
+                        </div>
+
+                        <input type="submit" class="submit" value="{{tpl:lang Publish the comment}}">
+                    </div>
+                </tpl:IfCommentPreview>
+            </tpl:Block>
+
+            <tpl:Block name="comment-form-add">
+                <h3>{{tpl:lang Add a comment}}</h3>
+                    {{tpl:SysBehavior behavior="publicCommentFormBeforeContent"}}
+
+                    <p>
+                        <input name="c_name" id="c_name" type="text" size="30" maxlength="255"
+                         value="{{tpl:CommentPreviewName encode_html="1"}}" placeholder="{{tpl:lang Name or pseudo}}" required>
+                    </p>
+
+                    <p>
+                        <input name="c_mail" id="c_mail" type="email" size="30" maxlength="255"
+                         value="{{tpl:CommentPreviewEmail encode_html="1"}}" placeholder="{{tpl:lang E-mail}}" required>
+                    </p>
+
+                    <p>
+                        <input name="c_site" id="c_site" type="text" size="30" maxlength="255"
+                         value="{{tpl:CommentPreviewSite encode_html="1"}}" placeholder="{{tpl:lang Website (optional)}}">
+                    </p>
+
+                    <p>
+                        <textarea name="c_content" id="c_content" cols="35"
+                         rows="7" placeholder="{{tpl:lang Your comment}}" required>{{tpl:CommentPreviewContent raw="1" encode_html="1"}}</textarea>
+                    </p>
+
+                     {{tpl:SysBehavior behavior="publicCommentFormAfterContent"}}
+
+                    <p>
+                        <input type="submit" class="preview" name="preview" value="{{tpl:lang Preview before sending}}">
+                        <tpl:IfCommentPreviewOptional>
+                            <input type="submit" class="submit" value="{{tpl:lang Send}}" />
+                        </tpl:IfCommentPreviewOptional>
+                    </p>
+                </tpl:Block>
+            </form>
+    </tpl:Block>
+</tpl:EntryIf>
+
+<tpl:Block name="comments-links">
+    <tpl:EntryIf operator="or" show_comments="1" pings_active="1">
+        <div id="comment-more">
+            <tpl:EntryIf show_comments="1">
+                <p id="comments-feed">{{tpl:AspectSVGIcon path="<path d='M4 11a9 9 0 0 1 9 9'></path><path d='M4 4a16 16 0 0 1 16 16'></path><circle cx='5' cy='19' r='1'></circle>" class="icon"}} <a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}">{{tpl:lang Comments feed}}</a></p>
+            </tpl:EntryIf>
+
+            <tpl:EntryIf pings_active="1">
+                <p id="comments-ping-link">{{tpl:AspectSVGIcon path="<path d='M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3'></path><line x1='8' y1='12' x2='16' y2='12'></line>" class="icon"}} {{tpl:lang Trackback URL:}} {{tpl:EntryPingLink}}</p>
+            </tpl:EntryIf>
+        </div>
+    </tpl:EntryIf>
+</tpl:Block>
+
+<tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+    </div><!-- #commentaires -->
+</tpl:EntryIf>
